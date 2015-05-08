@@ -19,32 +19,28 @@
                       </block>
                     </value>
                     <next>
-                      <block type="movement_stutter" id="115">
+                      <block type="movement_reverse" id="187">
                         <next>
-                          <block type="movement_forward" id="125">
+                          <block type="robot_delay" id="170" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="177">
+                                <field name="NUM">5000</field>
+                              </block>
+                            </value>
                             <next>
-                              <block type="robot_delay" id="170" inline="true">
-                                <value name="DELAY">
-                                  <block type="math_number" id="177">
-                                    <field name="NUM">5000</field>
-                                  </block>
-                                </value>
+                              <block type="movement_stop" id="135">
                                 <next>
-                                  <block type="movement_stop" id="135">
-                                    <next>
-                                      <block type="movement_setmotors" id="145" inline="true">
-                                        <value name="BOTHMOVLEFT">
-                                          <block type="math_number" id="152">
-                                            <field name="NUM">10</field>
-                                          </block>
-                                        </value>
-                                        <value name="BOTHMOVRIGHT">
-                                          <block type="math_number" id="159">
-                                            <field name="NUM">10</field>
-                                          </block>
-                                        </value>
+                                  <block type="movement_setmotors" id="145" inline="true">
+                                    <value name="BOTHMOVLEFT">
+                                      <block type="math_number" id="152">
+                                        <field name="NUM">10</field>
                                       </block>
-                                    </next>
+                                    </value>
+                                    <value name="BOTHMOVRIGHT">
+                                      <block type="math_number" id="159">
+                                        <field name="NUM">10</field>
+                                      </block>
+                                    </value>
                                   </block>
                                 </next>
                               </block>
